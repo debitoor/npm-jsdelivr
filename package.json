@@ -1,9 +1,9 @@
 {
-  "name": "jsdelivr-transform",
+  "name": "npm-jsdelivr",
   "version": "0.0.5",
-  "description": "Extract assets to make jsdelivr packages useful",
+  "description": "Search and URL retrieval from jsdelivr",
   "main": "index.js",
-  "repository": "https://github.com/bebraw/jsdelivr-transform.git",
+  "repository": "https://github.com/jsdelivr/npm-jsdelivr",
   "author": "Juho Vepsalainen",
   "license": "MIT",
   "devDependencies": {
