@@ -1,11 +1,12 @@
-var transform = require('./');
+#!/usr/bin/env node
+
+'use strict';
+
 var fs = require('fs');
 var request = require('request');
 
-request
-  .get({
-    url: 'https://cdnjs.com/packages.json',
-    json:true
-  }, function (err, res, body) {
-    fs.writeFileSync('./packages.json', JSON.stringify(body, null, 2));
-  });
+request.get({
+        url: 'http://api.jsdelivr.com/v1/jsdelivr/libraries'
+    }, function (err, res, body) {
+        fs.writeFile('./packages.json', body);
+    });
