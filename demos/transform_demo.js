@@ -6,7 +6,7 @@ var util = require('util');
 
 var request = require('request');
 
-var transform = require('./lib/transform');
+var transform = require('../lib/transform');
 
 
 main();
