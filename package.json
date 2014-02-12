@@ -1,6 +1,6 @@
 {
   "name": "jsdelivr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Search and URL retrieval from jsDelivr",
   "main": "./index.js",
   "bin": {
