@@ -1,5 +1,5 @@
 {
-  "name": "npm-jsdelivr",
+  "name": "jsdelivr",
   "version": "0.0.5",
   "description": "Search and URL retrieval from jsDelivr",
   "main": "./index.js",
