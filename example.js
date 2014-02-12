@@ -1,8 +1,20 @@
+#!/usr/bin/env node
+
+'use strict';
+
 var transform = require('./');
-var fs = require('fs');
+var packages = require('./packages');
 
-console.log(require('util').inspect(transform(require('./packages').packages), { depth: null, colors: false }));
 
-console.log();
-console.log();
-console.log('length', transform(require('./packages').packages).length);
+main();
+
+function main() {
+    var result = transform(packages);
+
+    console.log(require('util').inspect(result, {
+        depth: null,
+        colors: false
+    }));
+
+    console.log('\n\nlength', result.length);
+}
