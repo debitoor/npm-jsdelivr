@@ -71,74 +71,61 @@ Search `jsdelivr` for a given identifier:
 var jsdelivr = require('jsdelivr');
 var util = require('util');
 
-jsdelivr.search('angular', function(err, packages) {
+jsdelivr.search('d3', function(err, packages) {
     console.log(util.inspect(packages, {
         depth: null,
         colors: true
     }));
 });
+```
 
-/*
-[ { name: 'angular-strap',
-    url: '//cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.3/angular-strap.min.js',
+```json
+[ { name: 'FileAPI.id3',
+    url: '//cdn.jsdelivr.net/fileapi/1.2.5/fileapi',
     versions:
-     { '0.7.3': '//cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.3/angular-strap.min.js',
-       ... } },
-  { name: 'angular-ui-bootstrap',
-    url: '//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.2.0/ui-bootstrap-tpls.min.js',
-    versions: { '0.2.0': '//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.2.0/ui-bootstrap-tpls.min.js' } },
-  { name: 'angular-ui',
-    url: '//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js',
-    versions: { '0.4.0': '//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js' } },
-  { name: 'angular.js',
-    url: '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.3/angular.min.js',
-    versions:
-     { '1.1.3': '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.3/angular.min.js',
-       '1.1.1': '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.1/angular.min.js',
-       ... } },
-  ... ]
- */
+     { '1.2.5': '//cdn.jsdelivr.net/fileapi/1.2.5/fileapi',
+       '1.1.0': '//cdn.jsdelivr.net/fileapi/1.1.0/fileapi' } } ]
 ```
 
 ### URL
 
 Grab a URL for a specific package (it supports versions too):
 
-```javascript
+```js
 var jsdelivr = require('jsdelivr');
 var util = require('util');
 
-jsdelivr.url('angular.js', function(err, packages) {
+jsdelivr.url('jquery.tinymce', function(err, packages) {
     console.log(util.inspect(packages, {
         depth: null,
         colors: true
     }));
 });
+```
 
-/*
-{ name: 'angular.js',
-  url: '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.3/angular.min.js',
+```json
+{ name: 'jquery.tinymce',
+  url: '//cdn.jsdelivr.net/tinymce/4.0b2/jquery.tinymce.min.js',
   versions:
-   { '1.1.3': '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.3/angular.min.js',
-     '1.1.1': '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.1/angular.min.js',
-     ... } }
- */
+   { '4.0.1': '//cdn.jsdelivr.net/tinymce/4.0.1/jquery.tinymce.min.js',
+     '3.5.7': '//cdn.jsdelivr.net/tinymce/3.5.7/jquery.tinymce.min.js' } }
+```
 
-jsdelivr.url('angular.js@1.0.0', function (err, packages) {
+```js
+jsdelivr.url('jquery.tinymce@3.5.7', function (err, packages) {
     console.log(util.inspect(packages, {
         depth: null,
         colors: true
     }));
 });
+```
 
-/*
-{ name: 'angular.js@1.0.0',
-  url: '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.0/angular.min.js',
+```json
+{ name: 'jquery.tinymce@3.5.7',
+  url: '//cdn.jsdelivr.net/tinymce/3.5.7/jquery.tinymce.min.js',
   versions:
-   { '1.1.3': '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.3/angular.min.js',
-     '1.1.1': '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.1/angular.min.js',
-     ... } }
- */
+   { '4.0.1': '//cdn.jsdelivr.net/tinymce/4.0.1/jquery.tinymce.min.js',
+     '3.5.7': '//cdn.jsdelivr.net/tinymce/3.5.7/jquery.tinymce.min.js' } }
 ```
 
 ## Contributors
