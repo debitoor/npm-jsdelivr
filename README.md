@@ -124,8 +124,7 @@ jsdelivr.url('jquery.tinymce@3.5.7', function (err, packages) {
 { name: 'jquery.tinymce@3.5.7',
   url: '//cdn.jsdelivr.net/tinymce/3.5.7/jquery.tinymce.min.js',
   versions:
-   { '4.0.1': '//cdn.jsdelivr.net/tinymce/4.0.1/jquery.tinymce.min.js',
-     '3.5.7': '//cdn.jsdelivr.net/tinymce/3.5.7/jquery.tinymce.min.js' } }
+   { '3.5.7': '//cdn.jsdelivr.net/tinymce/3.5.7/jquery.tinymce.min.js' } }
 ```
 
 ## Contributors
